@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>frissyn's editing bin</title>
+	<meta charset="UTF-8">
+    <meta name="theme-color" content="#ff5aac">
+    <meta name="robots"      content="index, follow">
+    <meta name="viewport"    content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Search and view analytics data for web-hosted REPLs on Repl.it">
+
+    <meta property="og:type"        content="website">
+    <meta property="og:title"       content="frissyn's editing bin">
+    <meta property="og:site_name"   content="frissyn's editing bin">
+    <meta property="og:image"       content="https://img.icons8.com/ios/550/000000/video.png">
+    <meta property="og:description" content="My resource explorer for video editors and motion desginers.">
+
+    <link rel="stylesheet" href="../static/css/bulma.css">
+    <link rel="stylesheet" href="../static/css/prism.css">
+    <link rel="stylesheet" href="../static/css/support.css">
+    <link rel="stylesheet" href="//cdn.materialdesignicons.com/5.4.55/css/materialdesignicons.min.css">
+</head>
+
+<body>
+<section class="hero is-primary">
+    <div class="hero-body">
+        <div class="columns">
+        <div class="column is-12">
+            <div class="container">
+                <h1 class="title">
+                    <i class="is-large mdi mdi-video-vintage"></i>
+                    <i class="is-large mdi mdi-wrench"></i>
+                    frissyn's editing bin
+                </h1>
+                <h3 class="subtitle">
+                    Resource explorer for video editors and motion desginers.
+                    Created and managed by <a href="//github.com/frissyn"><b><i>frissyn</i></b></a>.
+                </h3>
+            </div>
+        </div>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+    <div class="columns">
+        <div class="column is-3">
+            <aside class="is-medium menu">
+                <p class="menu-label">Categories</p>
+                <ul class="menu-list">
+                    {% for t in titles %}
+                    <li><a href="#{{ t }}">
+                        <i class="mdi mdi-contain"></i>
+                        &nbsp;{{ t }}
+                    </a></li>
+                    {% endfor %}
+                </ul>
+            </aside>
+        </div>
+        
+        <div class="column is-9">
+        <div class="content is-medium">
+            <h3 class="title is-3"><b>Master List</b></h3>
+            {% for k, values in data.items() %}
+            <div class="box is-primary">
+                <h3 id="{{ k }}">{{ k }}</h3>
+
+                {% for source in values %}
+                    <hr><h5>
+                        <a href="{{ source["resource"] }}">{{ source["title"] }}</a>
+                        {% for t in source["tags"] %}
+                            <span class="tag {{ cgen() }}">{{t.lower()}}</span>
+                        {% endfor %}
+                    </h5>
+                {% endfor %}
+            </div>
+            {% endfor %}
+        </div>
+        </div>
+    </div>
+    </div>
+</section>
+</body>
+</html>

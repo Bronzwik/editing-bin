@@ -1,0 +1,28 @@
+{
+    "master": {
+        "RAWs": [
+            {
+                "title": "Anime RAWs Master List",
+                "resource": "https://www.aniraw.my.id/p/anime-raw-list.html",
+                "tags": ["resource", "raws", "video", "anime"]
+            },
+            {
+                "title": "Anime Flow Clip Pack (200+ Items)",
+                "resource": "https://mega.nz/folder/jAdBQSaC#O6D0OfveiMqkyEvPO7gp_w",
+                "tags": ["resource", "raws", "flow clips", "anime"]
+            }
+        ],
+        "Overlays": [
+            {
+                "title": "MEGA Overlay Pack (4000+ Items)",
+                "resource": "https://mega.nz/folder/Q5FEmBpA#EGyy-ZCBKglLpTfnXgA53Q",
+                "tags": ["resource", "overlay", "software-independent"]
+            },
+            {
+                "title": "Miscellaneous Overlay Pack (20+ Items)",
+                "resource": "https://mega.nz/folder/Mcp0wRBT#hxtqlITaC8Wb68mkpyWYnA",
+                "tags": ["resource", "overlay", "software-independent"]
+            }
+        ]
+    }
+}

@@ -1,0 +1,15 @@
+# PYTHON FILES
+# ------------
+dist/
+build/
+*.egg.info/
+__pycache__/
+_*/
+
+# ENVIRON FILES
+# ------------
+.env
+env/
+venv/
+node_modules/
+package-lock.json
